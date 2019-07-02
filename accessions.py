@@ -1,4 +1,3 @@
-import os
 
 liston =[]
 with open("PRJNA281204.txt") as lines1:
