@@ -1,11 +1,11 @@
 
 liston =[]
-with open("PRJNA281204.txt") as lines1:
+with open("filelist.txt") as lines1:
 	lines = lines1.readlines()
 	for row in lines:
-		#print(row)
+        #print(row)
 		lol = row.split('\t')
-	#print(lol)
+		print(lol)
 		liston.append(lol)
 		with open('SraInfo.tsv', 'w') as ref:
 			#ent = ['Cell_no'] 
@@ -18,10 +18,10 @@ with open("PRJNA281204.txt") as lines1:
 			
 			#print(liston)
 			info = [aa[3] for aa in liston]
-			print(info)
+			#print(info)
 			for wow in info:
 				uff = '\t'.join(wow)
-				print(uff)
+				#print(uff)
 				ref.writelines(uff + '\n')
         		
 
