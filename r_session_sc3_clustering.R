@@ -1,9 +1,15 @@
 ##SC3: for clustering (tutorial included)
 # http://www.bioconductor.org/packages/release/bioc/vignettes/SC3/inst/doc/SC3.html#cluster-stability 
 
-#if (!requireNamespace("BiocManager", quietly=TRUE))
-#  install.packages("BiocManager")
-#BiocManager::install("singleCellTK")
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#    install.packages("BiocManager")
+
+#BiocManager::install("SC3")
+#BiocManager::install("SingleCellExperiment")
+#BiocManager::install("SummarizedExperiment")
+#BiocManager::install("RUVSeq")
+
+#just in case:
 library(SingleCellExperiment)
 library(SC3)
 library(scater)
@@ -12,7 +18,6 @@ library(registry)
 library(pkgmaker)
 library(SCnorm)
 library(scran)
-library(scde)
 library(RUVSeq)
 library(simpleSingleCell)
 library(SummarizedExperiment)
