@@ -1,3 +1,5 @@
+##Run in the same direct as "chocolate.py" script
+#generates a new output2.csv file, sample_names edited
 import os
 
 entries = os.listdir("Data/")
