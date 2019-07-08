@@ -9,9 +9,10 @@ pipe <- read.csv(("~/Desktop/SRP_article/ALL_DATA/pipe2.tsv"), sep='\t')
 pipe <- DataFrame(pipe)
 pipe
 
+library(scater)
 library(Matrix)
 #one way:
-trial <- readSparseCounts(("~/Desktop/SRP_article/ALL_DATA/output1.tsv"), sep='\t') #library(matrix)
+trial <- readSparseCounts(("~/Desktop/SRP_article/ALL_DATA/output1.tsv"), sep='\t') 
 nrow(trial)
 trial
 trial<- trial[1:22085,]
