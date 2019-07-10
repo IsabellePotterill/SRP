@@ -29,13 +29,20 @@ Rsubread::buildindex(basename=file.path("/home/rpg18/Desktop/SRP_article/ALL_DAT
                      reference=ERCCfa_fn, gappedIndex = TRUE)
 
 #Now we can proceed with the alignment. In this step we could use just one readfile (both reads together-combined.fastq file\\ 
-#or we could have used readfile1 for the first read, and readfile2 for the second read [not sure if this is possible with both at the same time or individually])
+#or we could have used readfile1 for the first read, and readfile2 for the second read [not sure if this is possible with both\\
+#at the same time or individually])
 Rsubread::align(index=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/Index_ensembl_cdna38/", "ERCC_index"),
                 readfile1=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/", "combined.fastq.gz"),
                 #readfile1=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/reads/", "SRR1974543_1.fastq.gz"),
                 #readfile2=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/reads/", "SRR1974543_2.fastq.gz"),
                 output_file=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/", "out2.aln.bam"), type=0) #type=0 for RNA-seq
 
+#With this output: out2.aln.bam, we are ready for the counting
+#We try now to run HTSeq (htseq-count) to generate the counting matrix
+
+####################################
+
+#Example of annotation following scPipe tutorial, this is optional. We actually are not trying this, but we could
 sc_exon_mapping(file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/", "out.aln.bam"),
                  file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/", "out.map.bam"),
                  ERCCanno_fn)
