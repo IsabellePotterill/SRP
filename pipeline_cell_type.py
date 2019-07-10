@@ -1,3 +1,5 @@
+#pipe2.tsv is the file that we need to generate a "sce" object, which contains tow columns: sample_name and cell_type.
+
 liston =[]
 with open("SraRunTable.txt") as file:
     lines = file.readlines()
