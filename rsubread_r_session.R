@@ -8,7 +8,7 @@ library(Rsubread)
 #           indexSplit = FALSE,memory = 8000, TH_subread = 100, colorspace = FALSE)
 
 #we need alignment file: human-genome-reference
-ERCCfa_fn = file.path("/home/rpg18/Downloads/Homo_sapiens.GRCh38.cdna.all.fa.gz")
+ERCCfa_fn = file.path("/home/rpg18/Downloads/Homo_sapiens.GRCh38.cdna.all.fa.gz") #I have tried with cDNA
 #we need annotation file: human-annotation-reference
 ERCCanno_fn = file.path("/home/rpg18/Downloads/gencode.v28.annotation.gff3.gz")
 
@@ -19,6 +19,7 @@ fq_R2 = file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/reads/SR
 
 
 #This step is just needed to create a combined.fastq file.(Both reads in same .bam file after alignment)
+#we could do this in another way, maybe with fastp
 sc_trim_barcode(file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/", "combined.fastq.gz"),
                 fq_R1,
                 fq_R2,
@@ -38,7 +39,9 @@ Rsubread::align(index=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_
                 output_file=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/", "out2.aln.bam"), type=0) #type=0 for RNA-seq
 
 #With this output: out2.aln.bam, we are ready for the counting
-#We try now to run HTSeq (htseq-count) to generate the counting matrix
+
+#We try now to run HTSeq (htseq-count) to generate the counting matrix:
+
 #Quick installation of HTSeq:
 #pip install HTSeq
 #htseq-count 
