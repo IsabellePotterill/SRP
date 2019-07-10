@@ -43,8 +43,7 @@ Rsubread::align(index=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_
 #We can sort by names the .bam file using the command-line: 
 #samtools sort -n out.aln.bam -o out_sort.bammtools sort -n 
 
-#We try now to run HTSeq (htseq-count) to generate the counting matrix:
-
+#We now run HTSeq (htseq-count) to generate the counting matrix:
 #Quick installation of HTSeq:
 #pip install HTSeq
 #htseq-count 
