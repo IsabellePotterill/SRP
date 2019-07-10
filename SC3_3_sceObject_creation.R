@@ -1,5 +1,12 @@
 ##How to create a SingleCellExperiment object:
 
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#    install.packages("BiocManager")
+
+#BiocManager::install("SC3")
+#BiocManager::install("SingleCellExperiment")
+#BiocManager::install("SummarizedExperiment")
+
 library(SingleCellExperiment)
 library(SC3)
 library(SummarizedExperiment)
@@ -15,6 +22,9 @@ library(Matrix)
 trial <- readSparseCounts(("~/Desktop/SRP_article/ALL_DATA/output1.tsv"), sep='\t') 
 nrow(trial)
 trial
+trial_genes <- trial$Gene_name
+trial_genes
+trial <- subset(trial, select = -Gene_name)
 trial<- trial[1:22085,]
 nrow(trial)
 trial
