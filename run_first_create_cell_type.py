@@ -24,7 +24,7 @@ for entry in entries:
             genes[i] += '\t' + ug[1]
             i+=1
 
-##(new part): Appends just the sample_name
+##(new part): Appends just the sample_name. We need this sample_name format because of "pipe2" (sample_name vs cell_type)
 for entry in entries:
 	lol = entry.split('_')
 	#print(lol)
