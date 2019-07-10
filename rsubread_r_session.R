@@ -39,7 +39,9 @@ Rsubread::align(index=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_
 
 #With this output: out2.aln.bam, we are ready for the counting
 #We try now to run HTSeq (htseq-count) to generate the counting matrix
-
+#Quick installation of HTSeq:
+#pip install HTSeq
+#htseq-count 
 ####################################
 
 #Example of annotation following scPipe tutorial, this is optional. We actually are not trying this, but we could
