@@ -49,4 +49,5 @@ Rsubread::align(index=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_
 #Quick installation of HTSeq:
 #pip install HTSeq
 ##HTSeq:
+#ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_28/gencode.v28.annotation.gff3.gz
 #htseq-count -r name -f bam -s no --additional gene_name out_final.aln.bam /home/rpg18/Downloads/gencode.v28.annotation.gff3.gz > output_CountsMatrix.csv
