@@ -8,6 +8,7 @@ library(Rsubread)
 #BiocManager::install("SummarizedExperiment")
 #BiocManager::install("RUVSeq")
 #BiocManager::install("Rsubread")
+#BiocManager::install("scPipe")
 
 #we need alignment file: human-genome-reference
 #ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_28/GRCh38.primary_assembly.genome.fa.gz
