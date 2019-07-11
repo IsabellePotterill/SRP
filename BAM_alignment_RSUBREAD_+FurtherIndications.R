@@ -3,7 +3,7 @@ library(SingleCellExperiment)
 library(SummarizedExperiment)
 library(Rsubread)
 
-
+BiocManager::install("R
 #we need alignment file: human-genome-reference
 ERCCfa_fn = file.path("/home/rpg18/Downloads/GRCh38.primary_assembly.genome.fa.gz")
 
