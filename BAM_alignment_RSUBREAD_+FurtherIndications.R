@@ -28,7 +28,7 @@ sc_trim_barcode(file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/
 #Now we can proceed with the alignment. In this step we could use just one readfile (both reads together-combined.fastq file\\ 
 #or we could have used readfile1 for the first read, and readfile2 for the second read [not sure if this is possible with both\\
 #at the same time or individually])
-Rsubread::align(index=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/Index_ensembl_cdna38/", "ERCC_index"),
+Rsubread::align(index=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/Index38_GENCODE/", "ERCC_index"),
                 readfile1=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/", "combined.fastq.gz"),
                 #readfile1=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/reads/", "SRR1974543_1.fastq.gz"),
                 #readfile2=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/reads/", "SRR1974543_2.fastq.gz"),
@@ -36,7 +36,7 @@ Rsubread::align(index=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_
 
 #With this output: out_final.aln.bam, we are ready for the counting
 
-#The BAM file is already sorted. If not, we could sort by names the .bam file using the command-line: 
+#The BAM file is already sorted. But we could have sorted the BAM file by names (for example) using SAMTOOLS (command-line): 
 #samtools sort -n out.aln.bam -o out_sort.bammtools sort -n 
 
 #We now run HTSeq (htseq-count) to generate the counting matrix:
