@@ -3,7 +3,12 @@ library(SingleCellExperiment)
 library(SummarizedExperiment)
 library(Rsubread)
 
-BiocManager::install("R
+#BiocManager::install("SC3")
+#BiocManager::install("SingleCellExperiment")
+#BiocManager::install("SummarizedExperiment")
+#BiocManager::install("RUVSeq")
+#BiocManager::install("Rsubread")
+
 #we need alignment file: human-genome-reference
 ERCCfa_fn = file.path("/home/rpg18/Downloads/GRCh38.primary_assembly.genome.fa.gz")
 
