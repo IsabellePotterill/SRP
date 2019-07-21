@@ -1,11 +1,9 @@
-##Run in the same direct as "chocolate.py" script
-#generates a new output2.csv file, sample_names edited
+## Generates a new matrix with appropiate sample names
 import os
 
 entries = os.listdir("Data/")
 
-
-lista = []
+info = []
 genes = []
 with open('GSM1657871_1772078217.C03.csv') as tsvfile:
     reader = tsvfile.readlines()
@@ -24,20 +22,20 @@ for entry in entries:
             genes[i] += '\t' + ug[1]
             i+=1
 
-##(new part): Appends just the sample_name. We need this sample_name format because of "pipe2" (sample_name vs cell_type)
+# Appends just the sample_name, without chip_info and suffix ".csv" file format 
 for entry in entries:
-	lol = entry.split('_')
+	sample_name = entry.split('_')
 	#print(lol)
-	lista.append(lol[0])        
+	info.append(sample_name[0])        
 	#print(ent)
 	
 
-ent = ['Gene_name'] + lista
+ent = ['Gene_name'] + info
 
 with open('output1.tsv', 'w') as ref:
     ref.write('\t'.join(ent)+ '\n')
-    for thin in genes:
+    for name in genes:
         #print(thin)
-        ref.writelines(thin + '\n')
+        ref.writelines(name + '\n')
 
 
