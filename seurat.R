@@ -76,7 +76,5 @@ ElbowPlot(pbmc)
 pbmc <- FindNeighbors(pbmc, dims = 1:7) # p-value dropped-off 
 pbmc <- FindClusters(pbmc, resolution = 0.5)
 # Look at cluster IDs of the first 5 cells
-head(Idents(pbmc), 5)
-# If you haven't installed UMAP, you can do so via reticulate::py_install(packages =
-# 'umap-learn')
-pbmc <- RunUMAP(pbmc, dims = 1:11)
+head(Idents(pbmc), 10)
+
