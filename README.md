@@ -9,4 +9,5 @@
 index \
 alignment \
 mmquant \
-sc3
+sc3 \
+seurat
