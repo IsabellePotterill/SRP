@@ -26,19 +26,19 @@ fq_R2 = file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/reads/SR
 
 #This step is just needed to create a combined.fastq file.(Both reads in same .bam file after alignment)
 #we could do this in another way, maybe with fastp
-sc_trim_barcode(file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/", "combined.fastq.gz"),
-                fq_R1,
-                fq_R2,
-                read_structure = list(bs1=0, bl1=0, bs2=0, bl2=0, us=0, ul=0)) #we do not have barcodes, we do not need them
+#sc_trim_barcode(file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/", "combined.fastq.gz"),
+#                fq_R1,
+#                fq_R2,
+#                read_structure = list(bs1=0, bl1=0, bs2=0, bl2=0, us=0, ul=0)) #we do not have barcodes, we do not need them
 
 
 #Now we can proceed with the alignment. In this step we could use just one readfile (both reads together-combined.fastq file\\ 
 #or we could have used readfile1 for the first read, and readfile2 for the second read [not sure if this is possible with both\\
 #at the same time or individually])
 Rsubread::align(index=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/Index38_GENCODE/", "ERCC_index"),
-                readfile1=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/", "combined.fastq.gz"),
-                #readfile1=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/reads/", "SRR1974543_1.fastq.gz"),
-                #readfile2=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/reads/", "SRR1974543_2.fastq.gz"),
+                #readfile1=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/", "combined.fastq.gz"),
+                readfile1=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/reads/", "SRR1974543_1.fastq.gz"),
+                readfile2=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/reads/", "SRR1974543_2.fastq.gz"),
                 output_file=file.path("/home/rpg18/Desktop/SRP_article/ALL_DATA/Fastq_files/", "out_final.aln.bam"), type=0) #type=0 for RNA-seq
 
 #With this output: out_final.aln.bam, we are ready for the counting
