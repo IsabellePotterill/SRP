@@ -6,7 +6,7 @@
 
 
 # New pipeline analysis files: NP 
-#index
-#alignment
-#mmquant
-#sc3
+index
+alignment
+mmquant
+sc3
