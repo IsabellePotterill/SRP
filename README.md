@@ -4,6 +4,10 @@
 
 #gene_count_merger.py just outputs the file containing all the cells
 
+#old pipeline
+THEfinalcode.R
+normboxplot.R
+topgenes.R
 
 # New pipeline analysis files: NP 
 index \
