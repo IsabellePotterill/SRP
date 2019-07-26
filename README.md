@@ -5,7 +5,7 @@
 #gene_count_merger.py just outputs the file containing all the cells
 
 #old pipeline
-THEfinalcode.R
+THEfinalcode.R \n
 normboxplot.R
 topgenes.R
 
