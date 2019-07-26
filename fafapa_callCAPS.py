@@ -1,7 +1,6 @@
-###Parses fastqc output to find overrepresented sequences to feed into cutadapt
+###Parses fastqc output to find overrepresented sequences to feed into cutadapt with a capital -A command
 
 # imports
-#may need to install Fadapa (pip install fadapa)
 from fadapa import Fadapa
 import sys
 
@@ -31,8 +30,8 @@ output = ""
 
 #Loop through the list of sequeces from index 1 onwards (as the index 0 will be #Sequence)
 for things in list_of_seqs[1:]:
-	#Concatenates seqs in format required for cutadapt argument (first pair)
-	output = output + " -a " + things
+	#Concatenates seqs in format required for cutadapt argument (second pair)
+	output = output + " -A " + things
 
 #Prints the cutadapt argument - this sends it the stdout, allowing it to feed into the bash script
-print(output))
+print(output)
