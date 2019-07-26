@@ -4,10 +4,10 @@ Structure.py outputs three files. The first containing all cells (outputsmtest.t
 
 gene_count_merger.py just outputs the file containing all the cells
 
-# old pipeline
+# Old pipeline
 THEfinalcode.R\
 normboxplot.R\
-topgenes.R \
+topgenes.R 
 
 # New pipeline analysis files: NP 
 index \
